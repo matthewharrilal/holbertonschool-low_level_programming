@@ -1,6 +1,7 @@
 #include "main.h"
 
 #include <stdio.h>
+#include <string.h>
 
 int print_last_digit(int num)
 {
