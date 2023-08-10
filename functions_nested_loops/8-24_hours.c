@@ -2,8 +2,7 @@
 
 #include <stdio.h>
 
-
-void jack_bauer(void);
+void jack_bauer(void)
 {
 	char minuteString[4];
 	char hourString[4];
