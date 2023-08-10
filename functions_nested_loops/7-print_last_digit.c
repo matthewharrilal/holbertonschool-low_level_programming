@@ -8,6 +8,6 @@ int print_last_digit(int num)
 	int lengthOfString;
 	sprintf(str, "%d", num);
 
-	lengthOfString = strlen(int);
+	lengthOfString = strlen(num);
 	return str[lengthOfString - 1] - '0';
 }
