@@ -5,7 +5,6 @@
 void puts2(char *str)
 {
 	int i;
-	bool flag;
 
 	for (i = 0; i < strlen(str); i++)
 	{
