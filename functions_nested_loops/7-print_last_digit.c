@@ -5,6 +5,7 @@
 int print_last_digit(int num)
 {
 	char str[200]; 
+	int lengthOfString;
 	sprintf(str, "%d", num);
 
 	lengthOfString = strlen(int);
