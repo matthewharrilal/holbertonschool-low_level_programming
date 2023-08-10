@@ -6,11 +6,12 @@
 void print_rev(char *s)
 {
 	int lengthOfString;
+	int iterator;
 
 	lengthOfString = strlen(s);
 
-	for (int i = lengthOfString - 1; i >= 0; i--)
+	for (iterator = lengthOfString - 1; iterator >= 0; iterator--)
 	{
-		putchar(s[i]);
+		putchar(s[iterator]);
 	}
 }
