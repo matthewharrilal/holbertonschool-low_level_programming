@@ -11,7 +11,7 @@ void puts2(char *str)
 	{
 		if ((i % 2 == 0))
 		{
-			printf("%s\n", str[i]);
+			putchar(str[i]);
 		}
 	}
 }
