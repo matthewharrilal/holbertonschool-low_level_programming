@@ -12,6 +12,6 @@ void rev_string(char *s)
 
 	for (iterator = lengthOfString - 1; iterator >= 0; iterator--)
 	{
-		printf("%s", s[lengthOfString - iterator]);
+		printf("%d", s[lengthOfString - iterator]);
 	}
 }
