@@ -5,13 +5,17 @@
 
 void rev_string(char *s)
 {
-	int iterator;
+	int start;
+	char temp;
+	int end;
 	int lengthOfString;
 
 	lengthOfString = strlen(s);
 
-	for (iterator = lengthOfString - 1; iterator >= 0; iterator--)
-	{
-		printf("%d", s[lengthOfString - iterator]);
+	for (start = 0, end = lengthOfString - 1; iterator >= 0; iterator--)
+	{	
+		temp = s[start];
+		s[start] = s[end];
+		s[end] = temp;
 	}
 }
