@@ -6,6 +6,8 @@
 
 int _strlen(char *s)
 {
-	char dereferncedStr = *s;
+	char dereferncedStr;
+
+	dereferencedStr = *s;
 	return (strlen(dereferencedStr));
 }
