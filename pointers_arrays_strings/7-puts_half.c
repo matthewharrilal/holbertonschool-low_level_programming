@@ -7,8 +7,11 @@
 void puts_half(char *str)
 {
 	size_t i; 
+	int lengthOfString;
 
-	for (i = 0; i < (strlen(str) / 2); i++)
+	lengthOfString = strlen(str)
+
+	for (i = lengthOfString - 1; i > (lengthOfString / 2); i--)
 	{
 		putchar(str[i]);
 	}	
