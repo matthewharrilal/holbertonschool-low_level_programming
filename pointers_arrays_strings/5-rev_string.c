@@ -14,6 +14,4 @@ void rev_string(char *s)
 	{
 		s[iterator] = s[lengthOfString - iterator];
 	}
-
-	return (0);
 }
