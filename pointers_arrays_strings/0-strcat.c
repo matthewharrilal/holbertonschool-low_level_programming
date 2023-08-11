@@ -1,7 +1,7 @@
-#import "main.h"
+#include "main.h"
 
-#import <stdio.h>
-#import <string.h>
+#include <stdio.h>
+#include <string.h>
 
 char *_strcat(char *dest, char *src)
 {
@@ -18,5 +18,6 @@ char *_strcat(char *dest, char *src)
 	{
 		dest[index] = src[index - destinationLength];
 	}
+
 	return dest;
 }
