@@ -12,7 +12,6 @@ char *_strncat(char *dest, char *src, int n)
 
 	destinationLength = strlen(dest);
 	sourceLength = strlen(src);
-	combinedLength = destinationLength + sourceLength;
 	
 	for (index = destinationLength; index <= ((int)destinationLength - 1 + n); index++)
 	{
