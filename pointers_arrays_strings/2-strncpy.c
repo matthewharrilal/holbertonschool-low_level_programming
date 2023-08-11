@@ -7,7 +7,6 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int index;
 	size_t destinationLength;
-	int combinedLength;
 
 	destinationLength = strlen(dest);
 
@@ -15,5 +14,5 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		dest[index] = src[index - destinationLength];
 	}	
-	return dest
+	return dest;
 }
