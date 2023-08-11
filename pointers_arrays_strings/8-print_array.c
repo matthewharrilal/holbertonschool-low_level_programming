@@ -5,5 +5,10 @@
 
 void print_array(int *a, int n)
 {
-	printf("This is a = %d\n", *a);
+	int index;
+
+	for (index = 0; index <= n; i++)
+	{
+		printf("%d\n", *a[index]);
+	}
 }
