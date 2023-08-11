@@ -14,7 +14,7 @@ char *_strcat(char *dest, char *src)
 	destinationLength = strlen(dest);
 	
 	combinedLength = destinationLength + sourceLength;
-	for (index = destinationLength; index <= combinedLength; index++)
+	for (index = destinationLength; index <= (int)combinedLength; index++)
 	{
 		dest[index] = src[index - destinationLength];
 	}
