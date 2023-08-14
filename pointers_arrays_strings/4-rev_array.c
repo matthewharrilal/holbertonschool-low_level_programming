@@ -6,15 +6,11 @@
 void reverse_array(int *a, int n)
 {
 	int index;
+	int *copy;
+	int copyIndex;
 
 	index = 0;
-
-	int *copy;
     	copy = (int *)malloc(n * sizeof(int));
-  
-
-	int copyIndex;
-	
 	for (copyIndex = 0; copyIndex < n; copyIndex++)
 	{
 		copy[copyIndex] = a[copyIndex];
