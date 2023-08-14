@@ -9,4 +9,5 @@ char *string_toupper(char *c)
 		*c = *c - ('a' - 'A');
 		c++;
 	}
+	return c;
 }
