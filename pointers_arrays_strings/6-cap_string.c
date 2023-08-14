@@ -22,7 +22,11 @@ char *cap_string(char *c)
 
                 if (*c == ' ')
                 {
-                        foundSpace = true;
+                        while (*c == ' ')
+			{
+				foundSpace = true;
+				c++;
+			}
                 }
 
                 c++;
