@@ -5,9 +5,14 @@
 char *string_toupper(char *c)
 {
 	while (*c != '\0')
-	{
-		*c = *c - ('a' - 'A');
-		c++;
-	}
-	return c;
+        {
+                if ('A' <= *c && *c <= 'Z')
+                {
+                        c++;
+                        continue;
+                }
+                *c = *c - ('a' - 'A');
+                c++;
+        }
+        return c;
 }
