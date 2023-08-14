@@ -1,10 +1,10 @@
 #include "main.h"
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void reverse_array(int *a, int n)
 {
-	int digits[n];
 	int index;
 
 	index = 0;
