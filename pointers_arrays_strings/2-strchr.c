@@ -1,0 +1,20 @@
+#include "main.h"
+
+#include <stdio.h>
+
+char *_strchr(char *s, char c)
+{
+	int index;
+
+	while (*s != '\0')
+	{
+		if (*s == c)
+		{
+			return s;
+		} else {
+			s++;
+		}
+	}
+
+	return NULL;
+}
