@@ -10,7 +10,7 @@ char *cap_string(char *c)
         foundSpace = false;
         while (*c != '\0')
         {
-                if (foundSpace == true)
+                if (foundSpace == true && *c != ' ')
                 {
                         if ('a' <= *c && *c <= 'z')
                         {
@@ -20,15 +20,10 @@ char *cap_string(char *c)
                         foundSpace = false;
                 }
 
-                if (*c == ' ')
+                if (*c == ' ' || *c == '\t')
                 {
-                        while (*c == ' ')
-			{
-				foundSpace = true;
-				c++;
-			}
+                        foundSpace = true;
                 }
-
                 c++;
         }
         return (c);
