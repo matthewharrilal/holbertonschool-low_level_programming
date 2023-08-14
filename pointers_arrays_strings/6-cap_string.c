@@ -9,7 +9,7 @@ char *cap_string(char *c)
 
         foundSpace = false;
 
-	if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+	if ((*c >= 'A' && (*c <= 'Z') || (*c >= 'a' && *c <= 'z'))
 	{
 		*c = *c - ('a' - 'A');
 	}
