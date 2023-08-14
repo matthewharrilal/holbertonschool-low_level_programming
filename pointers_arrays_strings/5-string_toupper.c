@@ -6,12 +6,10 @@ char *string_toupper(char *c)
 {
 	while (*c != '\0')
         {
-                if ('A' <= *c && *c <= 'Z')
-                {
-                        c++;
-                        continue;
+                if ('a' <= *c && *c <= 'z')
+                {       
+                        *c = *c - ('a' - 'A');
                 }
-                *c = *c - ('a' - 'A');
                 c++;
         }
         return c;
