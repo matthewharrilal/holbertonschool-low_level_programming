@@ -8,6 +8,11 @@ char *cap_string(char *c)
 	bool foundSpace;
 
         foundSpace = false;
+
+	if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+	{
+		*c = *c - ('a' - 'A');
+	}
         while (*c != '\0')
         {
                 if (foundSpace == true && *c != ' ')
