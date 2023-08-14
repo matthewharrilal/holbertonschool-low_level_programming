@@ -16,10 +16,10 @@ void reverse_array(int *a, int n)
 		copy[copyIndex] = a[copyIndex];
 	}
 	
-	do 
+	while (index < n) 
 	{
                 *a = copy[(n - 1) - index];
                 index++;
                 a++;
-	} while (index < n);
+	}
 }
