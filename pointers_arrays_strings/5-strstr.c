@@ -23,7 +23,7 @@ char *_strstr(char *haystack, char *needle)
 	counter = 0;
 	startingNeedlePos = needle;
 
-	if ((haystackLength == 1 && *haystack == " ") || haystackLength == 0)
+	if ((haystackLength == 1 && *haystack == ' ') || haystackLength == 0)
 	{
 		return haystack;
 	}
