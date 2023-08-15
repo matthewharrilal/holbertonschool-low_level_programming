@@ -7,7 +7,6 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int haystackLength;
 	int needleLength;
 	int counter;
 
@@ -18,12 +17,11 @@ char *_strstr(char *haystack, char *needle)
 	char *startingNeedlePos;
 
 	firstChar = *needle;
-	haystackLength = strlen(haystack);
 	needleLength = strlen(needle);
 	counter = 0;
 	startingNeedlePos = needle;
 
-	if ((haystackLength == 1 && *haystack == ' ') || haystackLength == 0)
+	if ((needleLength == 1 && *needle == ' ') || needleLength == 0)
 	{
 		return haystack;
 	}
