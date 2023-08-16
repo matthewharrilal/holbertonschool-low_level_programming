@@ -5,24 +5,32 @@
 int main(int argc, char *argv[])
 {
 	int index;
-	int sum;
+        int sum;
+        char *validPointer;
+        long int validityValue;
 
-	if (argc == 1)
-	{
-		printf("0\n");
-	}
+        sum = 0;
 
-	for (index = 0; index < argc; index++)
-	{
-		if (isalpha(*argv[index]))
-		{
-			printf("Error\n");
-			return (1);
-		}
+        if (argc == 1)
+        {
+                printf("0\n");
+                return (0);
+        }
 
-		sum += atoi(argv[index]);	
-	}
+        for (index = 1; index < argc; index++)
+        {       
+                strtol(argv[index], &validPointer, 10);
 
-	printf("%d\n", sum);
-	return (0);
+                if (validPointer == argv[index] || *validPointer != '\0')
+                {
+                        printf("Error\n");
+                        return (1);
+                } else
+                {
+                        sum += atoi(argv[index]);
+                }
+        }
+
+        printf("%d\n", sum);
+        return (0);	
 }
