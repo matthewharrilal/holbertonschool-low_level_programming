@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
@@ -13,7 +14,7 @@ int main(int argc, char *argv[])
 
 	for (index = 0; index < argc; index++)
 	{
-		if (isAlpha(*argv[index]))
+		if (isalpha(*argv[index]))
 		{
 			printf("Error\n");
 			return (1);
@@ -22,6 +23,6 @@ int main(int argc, char *argv[])
 		sum += atoi(*argv[index]);	
 	}
 
-	printf("Sum %d\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
