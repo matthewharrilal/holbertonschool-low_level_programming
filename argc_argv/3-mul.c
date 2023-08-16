@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
 	}
 	
 	/* We are correctly de-referencing need to convert chars to int now  */
-	firstInt = atoi(*argv[1]);
-	secondInt = atoi(*argv[2]);
+	firstInt = atoi(argv[1]);
+	secondInt = atoi(argv[2]);
 	product = firstInt * secondInt;
 
 	printf("%d\n", product);
