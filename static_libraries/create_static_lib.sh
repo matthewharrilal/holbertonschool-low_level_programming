@@ -1,5 +1,5 @@
 #!/bin/bash
 
-current_directory = $PWD
+current_directory="$PWD"
 
-ar -rc liball.a $current_directory/*.c 
+ar -rc liball.a "$current_directory"/*.c 

@@ -1,0 +1,536 @@
+!<arch>
+//                                              60        `
+100-set_string.c/
+5-string_toupper.c/
+7-print_chessboard.c/
+0-memset.c/     0           0     0     644     187       `
+#include "main.h"
+
+#include <stdio.h>
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int index;
+
+	for (index =  0; index <= n; index++)
+	{
+		s[index] = b;
+	}
+
+	return (s);
+}
+
+0-reset_to_98.c/0           0     0     644     79        `
+#include "main.h"
+
+#include <stdio.h>
+
+
+void reset_to_98(int *n)
+{
+	*n = 98;
+}
+
+0-strcat.c/     0           0     0     644     445       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+char *_strcat(char *dest, char *src)
+{
+	int index;
+	size_t destinationLength;
+	size_t sourceLength;
+	size_t combinedLength;
+
+	sourceLength = strlen(src);
+	destinationLength = strlen(dest);
+	
+	combinedLength = destinationLength + sourceLength;
+	for (index = destinationLength; index <= (int)combinedLength; index++)
+	{
+		dest[index] = src[index - destinationLength];
+	}
+
+	return dest;
+}
+
+1-memcpy.c/     0           0     0     644     204       `
+#include "main.h"
+
+#include <stdio.h>
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int index;
+
+	for (index = 0; index < n; index++)
+	{
+		dest[index] = src[index];
+	}
+
+	return dest;
+}
+1-strncat.c/    0           0     0     644     340       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+char *_strncat(char *dest, char *src, int n)
+{
+	int index;
+	size_t destinationLength;
+
+	destinationLength = strlen(dest);
+	
+	for (index = destinationLength; index <= ((int)destinationLength - 1 + n); index++)
+	{
+		dest[index] = src[index - destinationLength];
+	}
+
+	return dest;
+
+}
+1-swap.c/       0           0     0     644     91        `
+#include "main.h"
+
+void swap_int(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+/0              0           0     0     644     127       `
+#include "main.h"
+
+#include <stdio.h>
+
+void set_string(char **s, char *to)
+{
+	char *temp; 
+	temp = *s;
+	*s = to;
+	to = temp;
+}
+
+2-strchr.c/     0           0     0     644     170       `
+#include "main.h"
+
+#include <stdio.h>
+
+char *_strchr(char *s, char c)
+{
+	while (*s != '\0')
+	{
+		if (*s == c)
+		{
+			return s;
+		} else {
+			s++;
+		}
+	}
+
+	return NULL;
+}
+2-strlen.c/     0           0     0     644     106       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+
+int _strlen(char *s)
+{
+	return (strlen(s));
+}
+2-strncpy.c/    0           0     0     644     211       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+char *_strncpy(char *dest, char *src, int n)
+{
+	int index;
+	for (index = 0; index <= n - 1; index++)
+	{
+		dest[index] = src[index];
+	}	
+	return dest;
+}
+
+3-puts.c/       0           0     0     644     87        `
+#include "main.h"
+
+#include <stdio.h>
+
+void _puts(char *str)
+{
+	printf("%s\n", str);
+}
+
+3-strcmp.c/     0           0     0     644     512       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+int _strcmp(char *s1, char *s2)
+{
+	/* You can increment pointers via i.e s1++ */
+	
+	while (*s1 != '\0' && *s2 != '\0')
+	{
+		if (*s1 < *s2)
+		{
+			return (-1);
+		} else if (*s1 > *s2)
+		{
+			return (1);
+		} else {
+			return (0);
+		}
+
+		s1++;
+		s2++;
+	}
+
+	/* Checks last character for null operator/space or remaining characters after while loop */
+	
+	if (*s1 < *s2)
+	{
+		return (-1);
+	} else if (*s1 > *s2)
+	{
+		return (1);
+	} else
+	{
+		return (0);
+	}
+}
+3-strspn.c/     0           0     0     644     197       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int count;
+
+	while (strchr(accept, *s))
+	{
+		count++;
+		s++;
+	}
+	return count;	
+}
+
+4-print_rev.c/  0           0     0     644     248       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+void print_rev(char *s)
+{
+	int lengthOfString;
+	int iterator;
+
+	lengthOfString = strlen(s);
+
+	for (iterator = lengthOfString - 1; iterator >= 0; iterator--)
+	{
+		putchar(s[iterator]);
+	}
+}
+4-rev_array.c/  0           0     0     644     401       `
+#include "main.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void reverse_array(int *a, int n)
+{
+	int index;
+	int *copy;
+	int copyIndex;
+
+	index = 0;
+    	copy = (int *)malloc(n * sizeof(int));
+	for (copyIndex = 0; copyIndex < n; copyIndex++)
+	{
+		copy[copyIndex] = a[copyIndex];
+	}
+	
+	while (index < n) 
+	{
+                *a = copy[(n - 1) - index];
+                index++;
+                a++;
+	}
+}
+
+4-strpbrk.c/    0           0     0     644     397       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+char *_strpbrk(char *s, char *accept)
+{
+        char *pointer;
+        while (*s && *accept)
+        {
+                pointer = strchr(accept, *s);
+
+                if (pointer != NULL)
+                {
+                        return s;
+                }
+
+                s++;
+                accept++;
+        }
+        return NULL;
+}
+
+5-rev_string.c/ 0           0     0     644     310       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+void rev_string(char *s)
+{
+	int start;
+	char temp;
+	int end;
+	int lengthOfString;
+
+	lengthOfString = strlen(s);
+
+	for (start = 0, end = lengthOfString - 1; start < end; start++, end--)
+	{	
+		temp = s[start];
+		s[start] = s[end];
+		s[end] = temp;
+	}
+}
+/18             0           0     0     644     286       `
+#include "main.h"
+
+#include <stdio.h>
+
+char *string_toupper(char *c)
+{
+	while (*c != '\0')
+        {
+                if ('a' <= *c && *c <= 'z')
+                {       
+                        *c = *c - ('a' - 'A');
+                }
+                c++;
+        }
+        return c;
+}
+5-strstr.c/     0           0     0     644     1020      `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+char *_strstr(char *haystack, char *needle)
+{
+	int needleLength;
+	int counter;
+
+	bool startedSequence;
+
+	char firstChar;
+	char *startingPos;
+	char *startingNeedlePos;
+
+	firstChar = *needle;
+	needleLength = strlen(needle);
+	counter = 0;
+	startingNeedlePos = needle;
+
+	if ((needleLength == 1 && *needle == ' ') || needleLength == 0)
+	{
+		return haystack;
+	}
+
+	while (*haystack && *needle)
+	{	
+		if (*haystack == firstChar && strchr(needle, *haystack))
+		{	
+			startedSequence = true;
+			startingPos = haystack;
+		}
+
+		while (startedSequence && *haystack)
+		{
+			if (*haystack == *needle)
+			{
+				counter++;
+				
+			} else
+			{
+				startedSequence = false;
+				needle = startingNeedlePos - 1;
+	
+				if (counter != needleLength)
+				{
+					counter = 0;
+				}
+			}
+
+			haystack++;
+			needle++;
+		}
+		haystack++;
+	}
+	
+	if (startedSequence || (counter == needleLength))
+	{
+		return startingPos;
+	} else
+	{
+		return NULL;
+	}
+}
+6-cap_string.c/ 0           0     0     644     744       `
+#include "main.h"
+
+#include <stdio.h>
+#include <stdbool.h>
+
+char *cap_string(char *c)
+{
+	bool foundSpace;
+
+        foundSpace = false;
+
+	if (((*c >= 'A') && (*c <= 'Z')) || ((*c >= 'a') && (*c <= 'z')))
+	{
+		*c = *c - ('a' - 'A');
+	}
+	
+        while (*c != '\0')
+        {
+                if (foundSpace == true && *c != ' ')
+                {
+                        if ('a' <= *c && *c <= 'z')
+                        {
+                                *c = *c - ('a' - 'A');
+                        }
+
+                        foundSpace = false;
+                }
+
+                if (*c == ' ' || *c == '\t')
+                {
+                        foundSpace = true;
+                }
+                c++;
+        }
+        return (c);
+}
+6-puts2.c/      0           0     0     644     186       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+void puts2(char *str)
+{
+	size_t i;
+
+	for (i = 0; i < strlen(str); i++)
+	{
+		if ((i % 2 == 0))
+		{
+			putchar(str[i]);
+		}
+	}
+}
+/38             0           0     0     644     476       `
+#include "main.h"
+
+#include <stdio.h>
+
+void print_chessboard(char (*a)[8])
+{
+	int rowIndex;
+        int columnIndex;
+        char currentLetter;
+
+        for (rowIndex = 0; rowIndex < 8; rowIndex++)
+        {
+                for (columnIndex = 0; columnIndex < 8; columnIndex++)
+                {
+                        currentLetter = a[rowIndex][columnIndex];
+                        printf("%c", currentLetter);
+                }
+                printf("\n");
+        }
+}
+7-puts_half.c/  0           0     0     644     249       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+
+void puts_half(char *str)
+{
+	size_t i; 
+	size_t lengthOfString;
+
+	lengthOfString = strlen(str);
+
+	for (i = (lengthOfString / 2); i <= (lengthOfString - 1); i++)
+	{
+		putchar(str[i]);
+	}	
+}
+
+8-print_array.c/0           0     0     644     161       `
+#include "main.h"
+
+#include <stdio.h>
+
+
+void print_array(int *a, int n)
+{
+	int index;
+
+	for (index = 0; index <= n; index++)
+	{
+		printf("%d\n", a[index]);
+	}
+}
+
+9-strcpy.c/     0           0     0     644     224       `
+#include "main.h"
+
+#include <stdio.h>
+#include <string.h>
+
+char *_strcpy(char *dest, char *src)
+{
+	int index;
+
+	for (index = 0; src[index] != '\0'; index++)
+	{
+		dest[index] = src[index];
+	}
+	printf("\n");
+	return (dest);
+}
