@@ -14,4 +14,4 @@ do
 	gcc -c "$c_file" -o "$object_file" 
 done
 
-ar -rc liball.a "$current_directory"/*.c 
+ar -rc liball.a "$current_directory"/*.o
