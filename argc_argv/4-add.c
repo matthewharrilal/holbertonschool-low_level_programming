@@ -7,7 +7,6 @@ int main(int argc, char *argv[])
 	int index;
         int sum;
         char *validPointer;
-        long int validityValue;
 
         sum = 0;
 
