@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 
 	s1 = (char *)realloc(s1, (firstSize + secondSize) * sizeof(char));
 	secondIndex = 0;
-	for (index = firstSize, index <= (firstSize + secondSize); index++)
+	for (index = firstSize; index <= (firstSize + secondSize); index++)
 	{
 		s1[index] = s2[secondIndex];
 		secondIndex++;
