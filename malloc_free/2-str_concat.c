@@ -5,38 +5,41 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	size_t firstSize;
-	size_t secondSize;
-	size_t index;
-	size_t secondIndex;
+        size_t firstSize;
+        size_t secondSize;
+        size_t index;
+        size_t secondIndex;
 
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
+        if (s1 == NULL)
+        {
+                s1 = "";
+        }
 
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
+        if (s2 == NULL)
+        {
+                s2 = "";
+        }
 
-	while (s1[firstSize])
-	{
-		firstSize++;
-	}
+        firstSize = 0;
+        secondSize = 0;
 
-	while (s2[secondSize])
-	{
-		secondSize++;
-	}
+        while (s1[firstSize])
+        {
+                firstSize++;
+        }
 
-	s1 = (char *)realloc(s1, (firstSize + secondSize) * sizeof(char));
-	secondIndex = 0;
-	for (index = firstSize; index <= (firstSize + secondSize); index++)
-	{
-		s1[index] = s2[secondIndex];
-		secondIndex++;
-	}
+        while (s2[secondSize])
+        {
+                secondSize++;
+        }
 
-	return s1;
+        s1 = (char *)realloc(s1, (firstSize + secondSize + 1) * sizeof(char));
+        secondIndex = 0;
+        for (index = firstSize; index < (firstSize + secondSize); index++)
+        {
+                s1[index] = s2[secondIndex];
+                secondIndex++;
+        }
+
+        return s1;
 }
