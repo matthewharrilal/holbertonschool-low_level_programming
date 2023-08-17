@@ -37,4 +37,6 @@ char *str_concat(char *s1, char *s2)
 		s1[index] = s2[secondIndex];
 		secondIndex++;
 	}
+
+	return s1;
 }
