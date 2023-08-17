@@ -7,7 +7,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *pointer;
 
-	pointer = (unsigned int)malloc(b * sizeof(unsigned int));
+	pointer = (unsigned int *)malloc(b * sizeof(unsigned int));
 
 	if (pointer == NULL)
 	{
