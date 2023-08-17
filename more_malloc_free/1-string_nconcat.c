@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -21,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	
 	firstLength = strlen(s1);
-	concatPointer = (char *)malloc((int(firstLength) + n) * sizeof(char));
+	concatPointer = (char *)malloc(((int)firstLength + n) * sizeof(char));
 
 	if (concatPointer == NULL)
 	{
@@ -35,7 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	secondaryIndex = 0;
-	for (index = firstLength; index < (int(firstLength) + n); index++)
+	for (index = firstLength; index < ((int)firstLength + n); index++)
 	{
 		concatPointer[index] = s2[index];
 		secondaryIndex++;
