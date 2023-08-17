@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 
-	for (index = 0; index < (firstLength + 1); index++)
+	for (index = 0; index < ((int)firstLength + 1); index++)
 	{
 		concatPointer[index] = s1[index];
 	}
