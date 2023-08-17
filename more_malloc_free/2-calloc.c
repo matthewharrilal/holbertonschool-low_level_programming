@@ -23,7 +23,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	while (arrPpointer[index])
 	{
 		arrPointer[index] = (unsigned int *)malloc(size * sizeof(unsigned int));
-		arrPointer++;
+		index++;
 	}
 
 	return arrPointer;
