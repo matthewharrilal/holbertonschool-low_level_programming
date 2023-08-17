@@ -4,13 +4,14 @@
 #include <stdlib.h>
 
 char *create_array(unsigned int size, char c)
-{
+{	
+	char *characters;
+
 	if (size == 0)
 	{
 		return NULL;
 	}
 
-	char *characters; 
 	characters = (char *)malloc(size * sizeof(char));
 
 	if (characters == NULL)
