@@ -6,7 +6,7 @@
 char *create_array(unsigned int size, char c)
 {	
 	char *characters;
-	int index;
+	unsigned int index;
 
 	if (size == 0)
 	{
