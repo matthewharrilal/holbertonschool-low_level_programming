@@ -6,6 +6,7 @@
 char *create_array(unsigned int size, char c)
 {	
 	char *characters;
+	int index;
 
 	if (size == 0)
 	{
@@ -19,6 +20,9 @@ char *create_array(unsigned int size, char c)
 		return NULL;
 	}
 
-	characters[0] = c;
+	for (index = 0; index < size; index++)
+	{
+		characters[index] = c;
+	}
 	return characters;
 }
