@@ -41,6 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		secondaryIndex++;
 	}
 
+	/* Strlen looking for a null terminating operator ... have to set  */
 	concatPointer[index] = '\0';
 	return concatPointer;
 }
