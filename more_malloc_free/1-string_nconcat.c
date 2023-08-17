@@ -7,8 +7,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concatPointer;
-	size_t index;
-	size_t secondaryIndex;
+	int index;
+	int secondaryIndex;
 	size_t firstLength;
 	
 	if (s1 == NULL)
