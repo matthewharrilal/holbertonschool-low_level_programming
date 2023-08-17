@@ -29,7 +29,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return NULL;
 	}
 
-
 	for (index = 0; index < ((int)firstLength + 1); index++)
 	{
 		concatPointer[index] = s1[index];
@@ -42,5 +41,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		secondaryIndex++;
 	}
 
+	concatPointer[index] = '\0';
 	return concatPointer;
 }
