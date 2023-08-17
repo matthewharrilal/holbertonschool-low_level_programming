@@ -10,14 +10,14 @@ char *str_concat(char *s1, char *s2)
 	size_t index;
 	size_t secondIndex;
 
-	if (*s1 == NULL)
+	if (s1 == NULL)
 	{
 		*s1 = "";
 	}
 
-	if (*s2 == NULL)
+	if (s2 == NULL)
 	{
-		*s2 = NULL;
+		*s2 = "";
 	}
 
 	while (s1[firstSize])
@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 		secondSize++;
 	}
 
-	*s1 = (char *)realloc(s1, (firstSize + secondSize) * sizeof(char));
+	s1 = (char *)realloc(s1, (firstSize + secondSize) * sizeof(char));
 	secondIndex = 0;
 	for (index = firstSize, index <= (firstSize + secondSize); index++)
 	{
