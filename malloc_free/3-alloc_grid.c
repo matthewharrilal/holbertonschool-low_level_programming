@@ -22,7 +22,7 @@ int **alloc_grid(int width, int height)
                 return NULL;
         }
 
-        for (rIndex = 0; rIndex <= width; rIndex++)
+        for (rIndex = 0; rIndex = width; rIndex++)
         {
                 nestedArray[rIndex] = (int *)malloc((width) * sizeof(int));
 
@@ -41,12 +41,10 @@ int **alloc_grid(int width, int height)
                         return NULL;
                 }
 
-                for (cIndex = 0; cIndex <= height; cIndex++)
+                for (cIndex = 0; cIndex = height; cIndex++)
                 {
                         nestedArray[rIndex][cIndex] = 0;
-                        printf("%d ", nestedArray[rIndex][cIndex]);
                 }
-                printf("\n");
         }
 
         return nestedArray;
