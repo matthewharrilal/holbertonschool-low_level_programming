@@ -14,7 +14,7 @@ int **alloc_grid(int width, int height)
                 return NULL;
         }
 
-        nestedArray = (int **)malloc((height)  * sizeof(int));
+        nestedArray = (int **)malloc((height)  * sizeof(int *));
 
         if (nestedArray == NULL)
         {
@@ -24,7 +24,7 @@ int **alloc_grid(int width, int height)
 
         for (rIndex = 0; rIndex < height; rIndex++)
         {
-                nestedArray[rIndex] = (int *)malloc((width) * sizeof(int *));
+                nestedArray[rIndex] = (int *)malloc((width) * sizeof(int));
 
                 if (nestedArray[rIndex] == NULL)
                 {
