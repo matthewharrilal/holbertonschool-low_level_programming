@@ -7,7 +7,7 @@ char *_strdup(char *str)
 {
 	char *copy;
 	size_t size;
-	int index;
+	size_t index;
 
 	if (str == NULL)
 	{
