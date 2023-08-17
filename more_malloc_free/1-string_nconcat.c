@@ -38,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	secondaryIndex = 0;
 	for (index = firstLength; index < ((int)firstLength + n); index++)
 	{
-		concatPointer[index] = s2[index];
+		concatPointer[index] = s2[secondaryIndex];
 		secondaryIndex++;
 	}
 
