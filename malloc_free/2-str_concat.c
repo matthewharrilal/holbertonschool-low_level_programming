@@ -9,6 +9,7 @@ char *str_concat(char *s1, char *s2)
         size_t secondSize;
         size_t index;
         size_t secondIndex;
+	char *newStrPointer;
 
         if (s1 == NULL)
         {
@@ -33,13 +34,18 @@ char *str_concat(char *s1, char *s2)
                 secondSize++;
         }
 
-        s1 = (char *)realloc(s1, (firstSize + secondSize + 1) * sizeof(char));
+        newStrPointer = (char *)realloc(s1, (firstSize + secondSize + 1) * sizeof(char));
         secondIndex = 0;
-        for (index = firstSize; index < (firstSize + secondSize); index++)
+        for (index = 0; index < firsSize; index++)
         {
-                s1[index] = s2[secondIndex];
+                newStrPointer[index] = s1[index];
+        }
+
+	for (index = firstSize; index < (firstSize + secondSize); index++)
+        {
+                newStrPointer[index] = s2[secondIndex];
                 secondIndex++;
         }
 
-        return s1;
+        return newStrPointer;
 }
