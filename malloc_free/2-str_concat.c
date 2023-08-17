@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 
         newStrPointer = (char *)realloc(s1, (firstSize + secondSize + 1) * sizeof(char));
         secondIndex = 0;
-        for (index = 0; index < firsSize; index++)
+        for (index = 0; index < firstSize; index++)
         {
                 newStrPointer[index] = s1[index];
         }
