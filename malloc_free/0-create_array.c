@@ -11,5 +11,10 @@ char *create_array(unsigned int size, char c)
 
 	char *characters;
 	characters = (char *)malloc(size * sizeof(char));
+
+	if (characters == NULL)
+	{
+		return NULL;
+	}
 	return characters;
 }
