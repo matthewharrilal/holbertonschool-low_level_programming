@@ -24,7 +24,7 @@ char *_strdup(char *str)
 	/* Accounting for null terminating operator */
 	copy = (char *)malloc((size + 1) * sizeof(char));
 
-	if (copy == null)
+	if (copy == NULL)
 	{
 		return NULL;
 	}
