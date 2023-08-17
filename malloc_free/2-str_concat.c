@@ -35,6 +35,12 @@ char *str_concat(char *s1, char *s2)
         }
 
         newStrPointer = (char *)malloc((firstSize + secondSize + 1) * sizeof(char));
+	
+	if (newStrPointer == NULL)
+	{
+		return NULL;
+	}
+
         secondIndex = 0;
         for (index = 0; index < firstSize; index++)
         {
