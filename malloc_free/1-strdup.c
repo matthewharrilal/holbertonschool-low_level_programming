@@ -24,14 +24,14 @@ char *_strdup(char *str)
 	/* Accounting for null terminating operator */
 	copy = (char *)malloc((size + 1) * sizeof(char));
 
+	if (copy == null)
+	{
+		return NULL;
+	}
+
 	for (index = 0; index <= size; index++)
 	{
 		copy[index] = str[index];
-	}
-
-	if (copy == NULL)
-	{
-		return NULL;
 	}
 
 	return copy;
