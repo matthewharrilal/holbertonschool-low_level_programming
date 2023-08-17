@@ -7,11 +7,14 @@ char *_strdup(char *str)
 {
 	char *copy;
 	size_t size;
+	int index;
 
 	if (str == NULL)
 	{
 		return NULL;
 	}
+
+	size = 0;
 
 	while (*str)
 	{
@@ -20,6 +23,11 @@ char *_strdup(char *str)
 	}
 
 	copy = (char *)malloc(size * sizeof(char));
+
+	for (index = 0; index < size; index++)
+	{
+		copy[index] = str[index];
+	}
 
 	if (copy == NULL)
 	{
