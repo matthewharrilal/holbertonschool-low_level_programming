@@ -15,7 +15,11 @@ int *array_range(int min, int max)
 	}
 
 	collectionPointer = (int *)malloc((max - min + 1) * sizeof(int));
-
+	
+	if (collectionPointer == NULL)
+	{
+		return NULL;
+	}
 	secondaryIndex = 0;
 	for (index = min; index < (max - min + 1))
 	{
