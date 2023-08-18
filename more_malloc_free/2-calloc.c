@@ -6,6 +6,9 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *arrPointer;
+	int *castingPointer;
+	unsigned int index;
+
 	if (nmemb == 0 || size == 0)
 	{
 		return NULL;
@@ -13,9 +16,19 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	arrPointer = malloc(nmemb * size);
 
-	if (arrPointer == NULL)
+	/* Cast to char pointer
+	 *
+	 * For pointer arithmetic to be able to iterate through
+	 *
+	 * Then zero it out
+	 *  */
+
+	index = 0;
+	castingPointer = (int *)arrPointer;
+
+	for (index = 0; index < (nmemb * size); index++)
 	{
-		return NULL;
+		castingPointer[index] = 0;
 	}
-	return arrPointer;
+	return castingPointer;
 }
