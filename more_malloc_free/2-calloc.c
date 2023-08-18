@@ -6,7 +6,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *arrPointer;
-	int *castingPointer;
+	unsigned char *castingPointer;
 	unsigned int index;
 
 	if (nmemb == 0 || size == 0)
@@ -24,7 +24,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	 *  */
 
 	index = 0;
-	castingPointer = (int *)arrPointer;
+	castingPointer = (unsigned char *)arrPointer;
 
 	for (index = 0; index < (nmemb * size); index++)
 	{
