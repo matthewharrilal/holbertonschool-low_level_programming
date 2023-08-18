@@ -11,8 +11,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	dogObject = (dog_t *)malloc(sizeof(dog_t));
 
-	nameCopy = name;
-	ownerCopy = owner;
+	nameCopy = strdup(name);
+	ownerCopy = strdup(owner);
 
 	if (dogObject == NULL)
 	{
