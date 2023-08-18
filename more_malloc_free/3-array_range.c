@@ -21,7 +21,7 @@ int *array_range(int min, int max)
 		return NULL;
 	}
 	secondaryIndex = 0;
-	for (index = min; index < (max - min + 1))
+	for (index = min; index < (max - min + 1); index++)
 	{
 		collectionPointer[secondaryIndex] = index;
 		secondaryIndex ++;
