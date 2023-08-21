@@ -1,6 +1,7 @@
 #include "3-calc.h"
 
 #include <stdio.h>
+#include <strings.h>
 
 int (*get_op_func(char *s))(int first, int second)
 {
@@ -16,7 +17,7 @@ int (*get_op_func(char *s))(int first, int second)
 
     while (ops[i].op != NULL)
     {
-	if (s == ops[i].op)
+	if (strcmp(s,ops[i].op) == 0)
 	{
 		return ops[i].f(first, second);
 	}
