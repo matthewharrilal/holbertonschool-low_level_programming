@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 	{
 		if (format[index] == 'c')
 		{	
-			c = va_arg(args, char);
+			c = va_arg(args, int);
 			printf("%c", c);
 		} else if (format[index] == 'i')
 		{
