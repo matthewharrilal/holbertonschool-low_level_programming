@@ -2,12 +2,18 @@
 
 #include <stdio.h>
 #include <strings.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
 	int firstInt;
 	int secondInt;
 	char *operator;
+
+	if (argc <= 1)
+	{
+		return (-1);
+	}
 
 	int (*result)(int, int);
 
