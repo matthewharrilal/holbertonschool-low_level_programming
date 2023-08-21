@@ -13,9 +13,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	for (index = 0; index < n; index++)
 	{
-		if (va_arg(args, char *) != NULL)
+		currentArg = va_arg(args, char *);
+                if (currentArg != NULL)
 		{
-			printf("%s", va_arg(args, char *));
+			printf("%s", currentArg);
 		} else 
 		{
 			printf("(nil)");
