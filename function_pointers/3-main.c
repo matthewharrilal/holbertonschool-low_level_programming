@@ -9,13 +9,13 @@ int main(int argc, char *argv[])
 	int firstInt;
 	int secondInt;
 	char *operator;
+	int (*result)(int, int);
 
 	if (argc <= 1)
 	{
 		return (-1);
 	}
 
-	int (*result)(int, int);
 
 	firstInt = atoi(argv[1]);
 	secondInt = atoi(argv[3]);
