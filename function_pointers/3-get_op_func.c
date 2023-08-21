@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int (*get_op_func(char *s))(int first, int second)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
         {"+", op_add},
@@ -19,7 +19,7 @@ int (*get_op_func(char *s))(int first, int second)
     {
 	if (strcmp(s,ops[i].op) == 0)
 	{
-		return ops[i].f(first, second);
+		return ops[i].f;
 	}
     	i++;
     }
