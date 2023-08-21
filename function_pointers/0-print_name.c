@@ -9,7 +9,7 @@ void print_name(char *name, void (*f)(char *))
 		while (*name)
 		{
 			putchar(*name);
-			name++
+			name++;
 		}
 		return;
 	}
