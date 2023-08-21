@@ -26,7 +26,7 @@ void print_all(const char * const format, ...)
 			printf("%d", i);
 		} else if (format[index] == 'f')
 		{
-			f = va_arg(args, float);
+			f = va_arg(args, double);
 			printf("%f", f);
 		} else if (format[index] == 's')
 		{
