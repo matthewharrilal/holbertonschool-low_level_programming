@@ -16,19 +16,19 @@ void print_all(const char * const format, ...)
 
 	for (index = 0; format[index] != '\0'; index++)
 	{
-		if (format[index] == "c")
+		if (format[index] == 'c')
 		{	
 			c = va_arg(args, char);
 			printf("%c", c);
-		} else if (format[index] == "i")
+		} else if (format[index] == 'i')
 		{
 			i = va_arg(args, int);
 			printf("%d", i);
-		} else if (format[index] == "f")
+		} else if (format[index] == 'f')
 		{
 			f = va_arg(args, float);
 			printf("%f", f);
-		} else if (format[index] == "s")
+		} else if (format[index] == 's')
 		{
 			s = va_arg(args, char *);
 			if (s != NULL)
