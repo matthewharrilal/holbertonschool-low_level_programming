@@ -1,7 +1,7 @@
 #include "3-calc.h"
 
 #include <stdio.h>
-#include <strings.h>
+#include <strings>
 
 int (*get_op_func(char *s))(int first, int second)
 {
