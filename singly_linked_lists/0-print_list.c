@@ -14,12 +14,12 @@ size_t print_list(const list_t *h)
 	/* While the current node exists  */
 	while (current)
 	{
-		if (h->str == NULL)
+		if (current->str == NULL)
 		{
 			printf("[0] (nil)\n");
 		} else
 		{
-			printf("[%d] %s\n", h->len, h->str);
+			printf("[%d] %s\n", current->len, current->str);
 		}
 		current = current->next;
 		counter++;
