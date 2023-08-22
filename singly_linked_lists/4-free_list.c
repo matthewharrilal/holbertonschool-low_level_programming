@@ -6,20 +6,20 @@
 void free_list(list_t *head)
 {
 	
-	list_t *current;
+	list_t *prev;
 	if (head == NULL)
 	{
 		return;
 	}
 
-	current = head;
+	prev = head;
 	while (head)
 	{
-		current = head;
-		free(head);
-		head = current->next;
+		prev = head;
+		head = prev->next;
+		free(prev)
 	}
 
 	free(head);
-	free(current);
+	free(prev);
 }
