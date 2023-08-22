@@ -7,10 +7,12 @@
 size_t print_list(const list_t *h)
 {
 	size_t counter;
+	struct list_t current;
 
+	current = h;
 	counter = 0;
 	/* While the current node exists  */
-	while (*h)
+	while (*current)
 	{
 		if (h->str == NULL)
 		{
