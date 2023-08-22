@@ -5,11 +5,12 @@
 
 void free_list(list_t *head)
 {
+	
+	list_t *current;
 	if (head == NULL)
 	{
 		return;
 	}
-	list_t *current;
 
 	current = head;
 	while (head)
