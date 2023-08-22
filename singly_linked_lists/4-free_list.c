@@ -20,6 +20,4 @@ void free_list(list_t *head)
 		free(temp);
 	}
 
-	free(head->str);
-	free(head);
 }
