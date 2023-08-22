@@ -7,7 +7,7 @@
 size_t print_list(const list_t *h)
 {
 	size_t counter;
-	struct list_t *current;
+	const list_t *current;
 
 	current = h;
 	counter = 0;
