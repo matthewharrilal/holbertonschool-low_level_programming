@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <string.h>
+#include <stdlib.h>
 
 list_t *add_node(list_t **head, const char *str)
 {
