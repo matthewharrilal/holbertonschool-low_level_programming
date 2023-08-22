@@ -12,7 +12,7 @@ size_t print_list(const list_t *h)
 	current = h;
 	counter = 0;
 	/* While the current node exists  */
-	while (*current)
+	while (current)
 	{
 		if (h->str == NULL)
 		{
