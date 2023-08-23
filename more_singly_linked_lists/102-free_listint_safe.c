@@ -7,6 +7,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *current;
+	listint_t *temp;
 	size_t counter;
 
 	if (head == NULL || *head == NULL)
