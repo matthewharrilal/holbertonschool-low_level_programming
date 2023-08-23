@@ -19,7 +19,7 @@ listint_t *reverse_listint(listint_t **head)
 	current = *head;
 	while (current->next)
 	{
-		*head = current->next /* We utilize head as our temp to save reference to the rest of the list  */
+		*head = current->next; /* We utilize head as our temp to save reference to the rest of the list  */
 		current->next = prev;
 
 		prev = current;
