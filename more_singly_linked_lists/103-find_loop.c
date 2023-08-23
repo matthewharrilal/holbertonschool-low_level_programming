@@ -24,7 +24,7 @@ listint_t *find_listint_loop(listint_t *head)
 
 		if (slow == fast)
 		{
-			return slow;
+			return fast;
 		}
 	}
 
