@@ -27,7 +27,7 @@ size_t free_listint_safe(listint_t **h)
 		counter++;	
 	}
 
-	*head = NULL;
+	*h = NULL;
 	free(current);
 	return counter;
 }
