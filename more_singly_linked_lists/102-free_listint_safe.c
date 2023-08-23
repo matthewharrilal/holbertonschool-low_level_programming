@@ -10,12 +10,12 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *temp;
 	size_t counter;
 
-	if (head == NULL || *head == NULL)
+	if (h == NULL || *h == NULL)
 	{
 		return (size_t)0;
 	}
 
-	current = *head;
+	current = *h;
 	counter = 0;
 
 	while (current)
