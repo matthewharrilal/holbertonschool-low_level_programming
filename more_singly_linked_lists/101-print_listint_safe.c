@@ -6,7 +6,7 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	listint_t *current;
+	const listint_t *current;
 	int counter;
 	
 	counter = 0;
