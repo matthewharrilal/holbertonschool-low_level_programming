@@ -19,17 +19,17 @@ size_t print_listint_safe(const listint_t *head)
 
 	slow = head;
 	fast = head->next;
-	while (slow != NULL && fast->next != NULL)
+	while (slow != NULL && fast != NULL && fast->next != NULL)
 	{
-		if (slow == fast)
-		{
-			exit(98);
-		}
-
 		printf("%p %d\n", (void *)slow, slow->n);
 		slow = slow->next;
 		fast = fast->next->next;
 		counter++;
+
+		if (slow == fast)
+		{
+			exit(98);
+		}
 	}
 
 	return counter;
