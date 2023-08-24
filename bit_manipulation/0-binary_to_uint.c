@@ -6,36 +6,38 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int index;
-	int placeCounter;
-	unsigned int sum;
-	int currentNum;
+        int index;
+        unsigned long long placeCounter;
+        unsigned int sum;
+        int currentNum;
 
-	if (b == NULL)
-	{
-		return 0;
-	} else if (strlen(b) == 1)
-	{
-		return 1;
-	}
-	index = 0;
-	placeCounter = 1 << (strlen(b) - 1); /* Bitshift to the left to determine the max amount we have to raise the current char to	*/
-	sum = 0;
+        if (b == NULL)
+        {
+                return 0;
+        } else if (strlen(b) == 1)
+        {
+                return 1;
+        }
+        index = 0;
+        placeCounter = (unsigned long long)1 << (strlen(b) - 1); /* Used to deterimine the max eponent we raise to given we read left to right  */
+        sum = 0;
 
-	while (b[index])
-	{
-		currentNum = b[index] - '0';
-		if (currentNum == 1)
-		{
-			sum += (currentNum * placeCounter);		
-		} else if (currentNum != 0)
-		{
-			return 0;
-		}
+        while (b[index] != '\0')
+        {
+                currentNum = b[index] - '0';
+                if (currentNum == 1)
+                {
+                        sum += (currentNum * placeCounter);
 
-		index++;
-		placeCounter /= 2;
-	}
+                } else if (currentNum != 0)
+                {
+                        return 0;
+                }
 
-	return sum;
+                index++;
+                placeCounter >>= (unsigned long long)1;
+        }
+
+        return sum;
 }
+
