@@ -19,7 +19,7 @@ unsigned int binary_to_uint(const char *b)
 		return 1;
 	}
 	index = 0;
-	placeCounter = 2 ^ (strlen(b) - 1); /* Used to deterimine the max eponent we raise to given we read left to right  */
+	placeCounter = 1 << (strlen(b) - 1); /* Bitshift to the left to determine the max amount we have to raise the current char to	*/
 	sum = 0;
 
 	while (b[index])
