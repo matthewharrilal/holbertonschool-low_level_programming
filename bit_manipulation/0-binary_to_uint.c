@@ -27,7 +27,7 @@ unsigned int binary_to_uint(const char *b)
 		currentNum = b[index] - '0';
 		if (currentNum == 1)
 		{
-			sum += (currentNum ^ placeCounter);		
+			sum += (currentNum * placeCounter);		
 		} else if (currentNum != 0)
 		{
 			return 0;
