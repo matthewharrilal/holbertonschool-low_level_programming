@@ -25,7 +25,7 @@ void print_binary(unsigned long int n)
 	dynamicArray = malloc(sizeof(unsigned long int));
 
 
-	while (num > 0)
+	while (n > 0)
 	{
 		dynamicArray[index] = (n % 2); /* Every iteration we divide by 2 and that shifts us to the left as we transition left value should get smaller  */
 		n /= 2;
