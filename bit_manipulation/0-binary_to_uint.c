@@ -10,8 +10,15 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int sum;
 	int currentNum;
 
+	if (b == NULL)
+	{
+		return 0;
+	} else if (strlen(b) == 1)
+	{
+		return 1;
+	}
 	index = 0;
-	placeCounter = 32;
+	placeCounter = strlen(b) * 2; /* Used to deterimine the max eponent we raise to given we read left to right  */
 	sum = 0;
 
 	while (b[index])
