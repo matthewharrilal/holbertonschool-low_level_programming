@@ -15,10 +15,10 @@ unsigned int binary_to_uint(const char *b)
 
 	while (b[index])
 	{
-		if (atoi(b[index]) == 1)
+		if (atoi(*b[index]) == 1)
 		{
-			sum += (b[index])^ placeCounter;		
-		} else if (atoi(b[index]) != 0)
+			sum += (*b[index])^ placeCounter;		
+		} else if (atoi(*b[index]) != 0)
 		{
 			return 0;
 		}
