@@ -7,7 +7,7 @@
 unsigned int binary_to_uint(const char *b)
 {
         int index;
-        long long placeCounter;
+        unsigned long placeCounter;
         unsigned int sum;
         int currentNum;
 
@@ -19,7 +19,7 @@ unsigned int binary_to_uint(const char *b)
                 return 1;
         }
         index = 0;
-        placeCounter = (long long)1 << (strlen(b) - 1); /* Used to deterimine the max eponent we raise to given we read left to right  */
+        placeCounter = (unsigned long)1 << (strlen(b) - 1); /* Used to deterimine the max eponent we raise to given we read left to right  */
         sum = 0;
 
         while (b[index] != '\0')
@@ -35,7 +35,7 @@ unsigned int binary_to_uint(const char *b)
                 }
 
                 index++;
-                placeCounter >>= (long long)1;
+                placeCounter >>= (unsigned long)1;
         }
 
         return sum;
