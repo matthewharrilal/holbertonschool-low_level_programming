@@ -7,7 +7,7 @@
 unsigned int binary_to_uint(const char *b)
 {
         int index;
-        unsigned long long placeCounter;
+        long long placeCounter;
         unsigned int sum;
         int currentNum;
 
