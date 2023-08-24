@@ -8,6 +8,7 @@ unsigned int binary_to_uint(const char *b)
 	int index;
 	int placeCounter;
 	unsigned int sum;
+	int currentNum;
 
 	index = 0;
 	placeCounter = 32;
@@ -15,10 +16,11 @@ unsigned int binary_to_uint(const char *b)
 
 	while (b[index])
 	{
-		if (atoi(*(b[index])) == 1)
+		currentNum = b[index] - '0';
+		if (currentNum == 1)
 		{
-			sum += (*(b[index]))^ placeCounter;		
-		} else if (atoi(*(b[index])) != 0)
+			sum += (currentNum ^ placeCounter);		
+		} else if (currentNum != 0)
 		{
 			return 0;
 		}
