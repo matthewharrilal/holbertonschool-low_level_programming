@@ -43,7 +43,8 @@ void print_binary(unsigned long int n)
         } else
         {
 
-                binaryStr[index] = '1';
+                /* binaryStr[index] = '1'; */
+		putchar('1');
                 index++;
                 difference = 0;
         }
@@ -51,10 +52,12 @@ void print_binary(unsigned long int n)
         difference = n - exponentFinder;
         if (difference > 0)
         {
-                binaryStr[index] = '1';
+                /* binaryStr[index] = '1'; */
+		putchar('1');
                 index++;
         } else {
-                binaryStr[index] = '0';
+               /* binaryStr[index] = '0' */;
+	       putchar('0');
                 index++;
         }
 
@@ -63,11 +66,13 @@ void print_binary(unsigned long int n)
                 exponentFinder >>= 1;
                 if ((long int)exponentFinder <= difference) /* Meaning you can still fit that remaining exponent inside of the remaining number (difference) */
                 {
-                        binaryStr[index] = '1';
+                        /* binaryStr[index] = '1'; */
+			putchar('1');
                         difference -= exponentFinder;
                 } else
                 {
-                        binaryStr[index] = '0';
+                       /*  binaryStr[index] = '0'; */
+			putchar('0');
                 }
 
                 index++;
@@ -81,7 +86,9 @@ void print_binary(unsigned long int n)
         }
 
         binaryStr[index] = '\0';
-        printf("%s\n", binaryStr);
+
+	putchar('\n');
+       /* printf("%s\n", binaryStr); */
 }
 
 /*
