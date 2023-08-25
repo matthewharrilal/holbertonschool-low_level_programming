@@ -88,7 +88,6 @@ void print_binary(unsigned long int n)
 
         /* binaryStr[index] = '\0'; */
 
-	putchar('\n');
        /* printf("%s\n", binaryStr); */
 }
 
