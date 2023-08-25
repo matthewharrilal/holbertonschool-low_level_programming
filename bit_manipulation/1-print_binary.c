@@ -8,7 +8,7 @@
 void print_binary(unsigned long int n)
 {
         /* Using string to track output  */
-        char binaryStr[(int)n];
+        char binaryStr[64];
 
         /* Detects what position we are at in the output string  */
         int index;
