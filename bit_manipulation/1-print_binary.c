@@ -81,11 +81,12 @@ void print_binary(unsigned long int n)
         /* Add necessary trailing 0's  */
         while (trailingZeros > index)
         {
-                binaryStr[index] = '0';
+                /* binaryStr[index] = '0'; */
+		putchar('0');
                 index++;
         }
 
-        binaryStr[index] = '\0';
+        /* binaryStr[index] = '\0'; */
 
 	putchar('\n');
        /* printf("%s\n", binaryStr); */
