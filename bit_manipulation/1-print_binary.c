@@ -27,7 +27,12 @@ void print_binary(unsigned long int n)
         difference = 0;
        /* binaryStr[index] = '0'; */
         trailingZeros = 0;
-
+		
+	if (n == 1)
+	{
+		putchar('1');
+		return;
+	}
 
         /* Keep shifting exponentFinder to the left until we find the max exponent  */
         while (exponentFinder < n)
