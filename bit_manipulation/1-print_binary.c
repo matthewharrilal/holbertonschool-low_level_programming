@@ -61,7 +61,7 @@ void print_binary(unsigned long int n)
         while (difference > 0 && exponentFinder > 0)
         {
                 exponentFinder >>= 1;
-                if (exponentFinder <= difference) /* Meaning you can still fit that remaining exponent inside of the remaining number (difference) */
+                if ((long int)exponentFinder <= difference) /* Meaning you can still fit that remaining exponent inside of the remaining number (difference) */
                 {
                         binaryStr[index] = '1';
                         difference -= exponentFinder;
