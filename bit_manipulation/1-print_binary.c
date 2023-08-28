@@ -2,7 +2,7 @@
 #include <limits.h>
 #include <stdbool.h>
 
-void print_binary_alt(unsigned long int n)
+void print_binary(unsigned long int n)
 {
         int index;
         bool firstSetBit;
