@@ -1,5 +1,5 @@
 #include "main.h"
-#include <limit.h>
+#include <limits.h>
 
 void print_binary_alt(unsigned long int n)
 {
