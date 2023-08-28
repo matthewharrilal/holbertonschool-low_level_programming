@@ -9,5 +9,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	*n = *n ^ (1UL << index);
 
-	return *n;
+	return 1;
 }
