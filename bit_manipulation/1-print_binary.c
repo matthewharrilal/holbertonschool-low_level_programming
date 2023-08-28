@@ -5,7 +5,13 @@
 void print_binary(unsigned long int n)
 {
         int index;
-        bool firstSetBit;
+	bool firstSetBit;
+
+	if (n == 0)
+	{
+		putchar('1');
+		return;
+	}
 
         firstSetBit = false;
         for (index = CHAR_BIT * sizeof(unsigned long int) - 1; index >= 0; index--)
