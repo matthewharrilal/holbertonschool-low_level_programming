@@ -1,5 +1,6 @@
 #include "main.h"
 #include <limits.h>
+#include <ctype.h>
 
 void print_binary_alt(unsigned long int n)
 {
