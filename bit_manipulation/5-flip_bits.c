@@ -19,7 +19,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	/* Count set bits in xorResult to see how many bits were flipped due to previous operation  */
 	while (xorResult > 0)
 	{
-		counter += xorResult & 1;
+		if (xorResult & 1)
+		{
+			counter += 1;
+		}
+
 		xorResult >>= 1;
 	}
 
