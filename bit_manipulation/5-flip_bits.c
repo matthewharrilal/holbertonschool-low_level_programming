@@ -8,11 +8,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	sizeOfUL = CHAR_BIT * sizeof(unsigned long int); 
 
-	if (n > sizeOfUL || m > sizeOfUL)
-	{
-		return -1;
-	}
-
 	xorResult = n ^ m;
 	counter = 0;
 
