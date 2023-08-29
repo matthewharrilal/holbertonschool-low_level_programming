@@ -9,8 +9,8 @@ int set_bit(unsigned long int *n, unsigned int index)
 		return -1;		
 	}
 
-	mask = *n & (1 << index );
-	*n ^= mask;
+	mask = *n ^ (1 << index );
+	*n = mask;
 
 	return *n;
 }
