@@ -3,7 +3,6 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int xorResult; /* Compares two sequences and returns a 1 where two bits are different  */
-	unsigned long int sizeOfUL;
 	unsigned int counter;
 
 	xorResult = n ^ m;
