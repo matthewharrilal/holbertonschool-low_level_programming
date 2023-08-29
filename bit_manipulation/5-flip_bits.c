@@ -6,8 +6,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int sizeOfUL;
 	unsigned int counter;
 
-	sizeOfUL = CHAR_BIT * sizeof(unsigned long int); 
-
 	xorResult = n ^ m;
 	counter = 0;
 
