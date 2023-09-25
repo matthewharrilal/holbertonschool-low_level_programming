@@ -28,7 +28,7 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	/* Now that we have our buffer lets read the data into the buffer  */
-	bytesread = read(fd, buffer, text_content);
+	bytes_read = read(fd, buffer, text_content);
 
 	if (bytes_read == -1)
 	{
