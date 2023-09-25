@@ -19,14 +19,14 @@ int create_file(const char *filename, char *text_content)
 		return -1;
 	}
 
-	buffer = malloc(strlen(text_content) + 1);
+	buffer = (char *)malloc(strlen(text_content) + 1);
 	if (buffer == NULL)
 	{
 		close(fd);
 		return -1;
 	}
 
-	bytes_written = write(filename, buffer, strlen(text_content));
+	bytes_written = write(fd, buffer, strlen(text_content));
 	
 	if (bytes_written == -1)
 	{
