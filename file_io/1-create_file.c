@@ -5,7 +5,6 @@ int create_file(const char *filename, char *text_content)
 	int fd;
 	char *buffer;
 	ssize_t bytes_written;
-	ssize_t bytes_read;
 
 	if (filename == NULL)
 	{
@@ -27,17 +26,7 @@ int create_file(const char *filename, char *text_content)
 		return -1;
 	}
 
-	/* Now that we have our buffer lets read the data into the buffer  */
-	bytes_read = read(fd, buffer, text_content);
-
-	if (bytes_read == -1)
-	{
-		free(buffer);
-		close(fd);
-		return 0;
-	}
-
-	bytes_written = write(fd, buffer, bytes_read);
+	bytes_written = write(fd, buffer, strlen(text_content));
 	
 	if (bytes_written == -1)
 	{
