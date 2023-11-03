@@ -3,7 +3,7 @@
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 
-	int counter;
+	unsigned int counter;
 	dlistint_t *current;
 
 	current = head;
