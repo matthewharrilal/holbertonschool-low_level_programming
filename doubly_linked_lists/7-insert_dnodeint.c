@@ -8,12 +8,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t newNode;
 	dlistint_t temp;
 
-	if (head == NULL || *head == NULL)
+	if (h == NULL || *h == NULL)
 	{
 		return NULL;
 	}
 
-	current = *head;
+	current = *h;
 	newNode = malloc(sizeof(dlistint_s));
 	
 	if (newNode == NULL)
