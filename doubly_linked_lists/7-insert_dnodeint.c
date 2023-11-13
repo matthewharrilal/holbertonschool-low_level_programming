@@ -85,7 +85,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
     if (h == NULL)
         return NULL;
 
-    // Create a new node
     new_node = malloc(sizeof(dlistint_t));
     if (new_node == NULL)
         return NULL;
@@ -93,7 +92,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
     new_node->prev = NULL;
     new_node->next = NULL;
 
-    // Case: Insert at the beginning
     if (idx == 0)
     {
         new_node->next = *h;
@@ -103,21 +101,18 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
         return new_node;
     }
 
-    // Traverse to the desired position
     current = *h;
     for (i = 0; i < idx - 1 && current != NULL; i++)
     {
         current = current->next;
     }
 
-    // Check if the index is out of bounds
     if (current == NULL)
     {
         free(new_node);
         return NULL;
     }
 
-    // Insert the new node
     new_node->prev = current;
     new_node->next = current->next;
 
