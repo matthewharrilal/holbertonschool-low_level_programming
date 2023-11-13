@@ -30,7 +30,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	while (current != NULL)
 	{
 		
-		prev = current;
+		prev = current->prev;
 
 		if (index == counter)
 		{
